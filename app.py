@@ -68,16 +68,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# 3. Comprehensive Multilingual Translation Data Tree
+# 3. Comprehensive Multilingual Translation Data Tree (All Emojis Removed)
 translations = {
     "English": {
         "sidebar_title": "Customs Revenue Engine",
         "dev_by": "Developed by:",
         "lang_select": "Select Language Interface:",
         "curr_select": "Select Display Currency Layer:",
-        "gourde_opt": "Haitian Gourde (HTG 🇭🇹)",
-        "usd_opt": "US Dollar (USD 🇺🇸)",
-        "tip": "💡 **Tip:** Hover your cursor over the chart markers to instantly track month-by-month fiscal collections.",
+        "gourde_opt": "Haitian Gourde (HTG)",
+        "usd_opt": "US Dollar (USD)",
+        "tip": "Tip: Hover your cursor over the chart markers to instantly track month-by-month fiscal collections.",
         "nat_focus": "Institutional Mandate",
         "nat_desc": "Real-world customs valuation ledger mapping public treasury inflows handled by the Administration Générale des Douanes (AGD).",
         "main_title": "AGD Haiti Customs Revenue Analytics Framework",
@@ -90,13 +90,13 @@ translations = {
         "graph_y_htg": "Receipts in Gourdes (HTG)",
         "bureau_label": "Customs Outpost",
         "generated": "Collected",
-        "ledger_title": "📊 Verified Customs Clearing Summary Ledger",
+        "ledger_title": "Verified Customs Clearing Summary Ledger",
         "col_month": "Month",
         "col_bureau": "Customs Bureau",
         "col_rate": "Exchange Rate Basis",
         "col_usd": "Volume (USD)",
         "col_htg": "Volume (HTG)",
-        "report_btn": "📥 Download Verified Customs Report (.TXT)",
+        "report_btn": "Download Verified Customs Report (.TXT)",
         "report_success": "AGD Customs Data Manifest successfully compiled."
     },
     "Français": {
@@ -104,9 +104,9 @@ translations = {
         "dev_by": "Développé par :",
         "lang_select": "Sélectionner l'Interface de Langue :",
         "curr_select": "Sélectionner la Devise d'Affichage :",
-        "gourde_opt": "Gourde Haïtienne (HTG 🇭🇹)",
-        "usd_opt": "Dollar Américain (USD 🇺🇸)",
-        "tip": "💡 **Conseil :** Passez la souris sur les marqueurs pour suivre instantanément les perceptions fiscales mensuelles.",
+        "gourde_opt": "Gourde Haïtienne (HTG)",
+        "usd_opt": "Dollar Américain (USD)",
+        "tip": "Conseil : Passez la souris sur les marqueurs pour suivre instantanément les perceptions fiscales mensuelles.",
         "nat_focus": "Mandat Institutionnel",
         "nat_desc": "Registre réel d'évaluation douanière cartographiant les entrées du trésor public gérées par l'Administration Générale des Douanes (AGD).",
         "main_title": "Cadre d'Analyse des Revenus de l'AGD Haïti",
@@ -119,13 +119,13 @@ translations = {
         "graph_y_htg": "Recettes en Gourdes (HTG)",
         "bureau_label": "Bureau de Douane",
         "generated": "Perçu",
-        "ledger_title": "📊 Grand Livre Récapitulatif de Dédouanement Vérifié",
+        "ledger_title": "Grand Livre Récapitulatif de Dédouanement Vérifié",
         "col_month": "Mois",
         "col_bureau": "Bureau Douanier",
         "col_rate": "Base du Taux de Change",
         "col_usd": "Volume (USD)",
         "col_htg": "Volume (HTG)",
-        "report_btn": "📥 Télécharger le Manifeste de Douane (.TXT)",
+        "report_btn": "Télécharger le Manifeste de Douane (.TXT)",
         "report_success": "Manifeste de données de l'AGD compilé avec succès."
     },
     "Kreyòl Ayisyen": {
@@ -133,9 +133,9 @@ translations = {
         "dev_by": "Devlope pa:",
         "lang_select": "Chwazi Lang pou Sistèm nan:",
         "curr_select": "Chwazi Lajan pou Montre a:",
-        "gourde_opt": "Goud Ayisyen (HTG 🇭🇹)",
-        "usd_opt": "Dola Ameriken (USD 🇺🇸)",
-        "tip": "💡 **Konsèy:** Pase kòrsè a sou pwen yo pou wè kantite lajan egzak Ladwàn kolekte chak mwa.",
+        "gourde_opt": "Goud Ayisyen (HTG)",
+        "usd_opt": "Dola Ameriken (USD)",
+        "tip": "Konsèy: Pase kòrsè a sou pwen yo pou wè kantite lajan egzak Ladwàn kolekte chak mwa.",
         "nat_focus": "Manda Enstitisyonèl",
         "nat_desc": "Done reyèl ki montre lajan k ap antre nan kès Leta atravè Administrasyon Jeneral Ladwàn (AGD).",
         "main_title": "Sistèm Analiz Revni Ladwàn Ayiti (AGD)",
@@ -148,13 +148,13 @@ translations = {
         "graph_y_htg": "Revni an Goud (HTG)",
         "bureau_label": "Biwo Ladwàn",
         "generated": "Kolekte",
-        "ledger_title": "📊 Kanè Rezime Dédouanement ki Verifye",
+        "ledger_title": "Kanè Rezime Dédouanement ki Verifye",
         "col_month": "Mwa",
         "col_bureau": "Biwo Ladwàn",
         "col_rate": "Taks Chanjman Lajan",
         "col_usd": "Kantite (USD)",
         "col_htg": "Kantite (HTG)",
-        "report_btn": "📥 Telechaje Rapò Ofisyèl Ladwàn nan (.TXT)",
+        "report_btn": "Telechaje Rapò Ofisyèl Ladwàn nan (.TXT)",
         "report_success": "Rapò done AGD a byen fèt epi li prè."
     }
 }
@@ -175,7 +175,7 @@ def load_customs_data():
 df = load_customs_data()
 
 # 5. Sidebar Navigation Matrix Control
-st.sidebar.markdown("## 🌐 GlobalInternet.py")
+st.sidebar.markdown("## GlobalInternet.py")
 
 selected_lang = st.sidebar.selectbox(
     "Language Architecture",
@@ -202,7 +202,7 @@ with col_left:
     st.markdown('<div class="feature-card">', unsafe_allow_html=True)
     st.subheader(ln["nat_focus"])
     
-    # Clean asset link matching your airport framework
+    # Secure web source for coat of arms
     haitian_arms_url = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Coat_of_arms_of_Haiti.svg"
     st.image(haitian_arms_url, caption="L'Union Fait la Force", width='stretch')
     
