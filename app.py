@@ -111,7 +111,7 @@ translations = {
         "nat_focus": "Mandat Institutionnel",
         "nat_desc": "Registre réel d'évaluation douanière cartographiant les entrées du trésor public gérées par l'Administration Générale des Douanes (AGD).",
         "main_title": "🛡️ Cadre d'Analyse des Revenus de l'AGD Haïti",
-        "main_sub": "Profil Officiel du Registre des Recettes Douanières (Données Trimestrielles)",
+        "main_sub": "Profil Oficiel du Registre des Recettes Douanières (Données Trimestrielles)",
         "cum_usd": "Total des Recettes Collectées (USD)",
         "cum_htg": "Total des Recettes Collectées (HTG)",
         "graph_title": "Profil de Perception Fiscale Mensuelle par Bureau",
@@ -203,8 +203,9 @@ with col_left:
     st.markdown('<div class="feature-card">', unsafe_allow_html=True)
     st.subheader(ln["nat_focus"])
     
+    # Clean asset mapping match for L'Union Fait la Force arms template
     haitian_arms_url = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Coat_of_arms_of_Haiti.svg"
-    st.image(haitian_arms_url, caption="L'Union Fait la Force", width='stretch')
+    st.image(haitian_arms_url, caption="L'Union Fait la Force", use_container_width=True)
     
     st.markdown(f"<p style='font-size: 0.85rem; color: #cbd5e1 !important; margin-top: 10px;'>{ln['nat_desc']}</p>", unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
@@ -229,12 +230,10 @@ with col_right:
     if currency_choice == ln["gourde_opt"]:
         y_column = "Revenue_HTG"
         y_title = ln["graph_y_htg"]
-        line_color = "#00ebc7"  # High visibility custom mint
         hover_format = "HTG %{y:,.2f}"
     else:
         y_column = "Revenue_USD"
         y_title = ln["graph_y_usd"]
-        line_color = "#ff5470"  # High visibility neon pink
         hover_format = "$%{y:,.2f}"
         
     # Generate Interactive Multi-bureau Comparative Bar Framework
@@ -246,7 +245,7 @@ with col_right:
         title=f"{ln['graph_title']} ({y_title})",
         labels={"Month": ln["graph_x"], y_column: y_title, "Customs_Bureau": ln["bureau_label"]},
         barmode="group",
-        hover_name="Customs_Bureau"  # Safe internal link that resolves indexing collisions
+        hover_name="Customs_Bureau"
     )
     
     fig.update_traces(
@@ -262,7 +261,7 @@ with col_right:
         title_font_color="#ffffff"
     )
     
-    st.plotly_chart(fig, width='stretch')
+    st.plotly_chart(fig, use_container_width=True)
     
     # 7. Summary Table Construction Viewport
     st.markdown(f"### {ln['ledger_title']}")
@@ -275,7 +274,7 @@ with col_right:
     display_df[ln["col_htg"]] = display_df[ln["col_htg"]].map("{:,.2f} HTG".format)
     display_df[ln["col_rate"]] = display_df[ln["col_rate"]].map("{:.2f}".format)
     
-    st.dataframe(display_df, width='stretch', hide_index=True)
+    st.dataframe(display_df, use_container_width=True, hide_index=True)
     st.markdown("---")
     
     # 8. Dynamic Data Engine Manifest Export Block
