@@ -5,7 +5,6 @@ import plotly.express as px
 # 1. Page Configuration
 st.set_page_config(
     page_title="AGD Haiti Customs Fiscal Analytics Engine",
-    page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -81,7 +80,7 @@ translations = {
         "tip": "💡 **Tip:** Hover your cursor over the chart markers to instantly track month-by-month fiscal collections.",
         "nat_focus": "Institutional Mandate",
         "nat_desc": "Real-world customs valuation ledger mapping public treasury inflows handled by the Administration Générale des Douanes (AGD).",
-        "main_title": "🛡️ AGD Haiti Customs Revenue Analytics Framework",
+        "main_title": "AGD Haiti Customs Revenue Analytics Framework",
         "main_sub": "Official Customs Receipts Ledger Profile (Quarterly Records)",
         "cum_usd": "Total Collected Revenue (USD)",
         "cum_htg": "Total Collected Revenue (HTG)",
@@ -110,7 +109,7 @@ translations = {
         "tip": "💡 **Conseil :** Passez la souris sur les marqueurs pour suivre instantanément les perceptions fiscales mensuelles.",
         "nat_focus": "Mandat Institutionnel",
         "nat_desc": "Registre réel d'évaluation douanière cartographiant les entrées du trésor public gérées par l'Administration Générale des Douanes (AGD).",
-        "main_title": "🛡️ Cadre d'Analyse des Revenus de l'AGD Haïti",
+        "main_title": "Cadre d'Analyse des Revenus de l'AGD Haïti",
         "main_sub": "Profil Officiel du Registre des Recettes Douanières (Données Trimestrielles)",
         "cum_usd": "Total des Recettes Collectées (USD)",
         "cum_htg": "Total des Recettes Collectées (HTG)",
@@ -139,7 +138,7 @@ translations = {
         "tip": "💡 **Konsèy:** Pase kòrsè a sou pwen yo pou wè kantite lajan egzak Ladwàn kolekte chak mwa.",
         "nat_focus": "Manda Enstitisyonèl",
         "nat_desc": "Done reyèl ki montre lajan k ap antre nan kès Leta atravè Administrasyon Jeneral Ladwàn (AGD).",
-        "main_title": "🛡️ Sistèm Analiz Revni Ladwàn Ayiti (AGD)",
+        "main_title": "Sistèm Analiz Revni Ladwàn Ayiti (AGD)",
         "main_sub": "Rapò Ofisyèl sou Lajan ki Antre nan Ladwàn (Done Trimès)",
         "cum_usd": "Total Lajan Kolekte (USD)",
         "cum_htg": "Total Lajan Kolekte (HTG)",
@@ -203,7 +202,7 @@ with col_left:
     st.markdown('<div class="feature-card">', unsafe_allow_html=True)
     st.subheader(ln["nat_focus"])
     
-    # Exact flag reference alignment using valid width parameter
+    # Clean asset link matching your airport framework
     haitian_arms_url = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Coat_of_arms_of_Haiti.svg"
     st.image(haitian_arms_url, caption="L'Union Fait la Force", width='stretch')
     
