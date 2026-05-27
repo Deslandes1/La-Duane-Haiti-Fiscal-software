@@ -163,7 +163,6 @@ translations = {
 # 4. Authentic Public Treasury Data Matrix Ingestion
 @st.cache_data
 def load_customs_data():
-    # Built using authentic statistical ranges released for AGD first-quarter operational tracking
     data = {
         "Month": ["October", "October", "November", "November", "December", "December"],
         "Customs_Bureau": ["Port-au-Prince (Maritime)", "Cap-Haïtien", "Port-au-Prince (Maritime)", "Miragoâne", "Port-au-Prince (Maritime)", "Cap-Haïtien"],
@@ -246,17 +245,14 @@ with col_right:
         color="Customs_Bureau",
         title=f"{ln['graph_title']} ({y_title})",
         labels={"Month": ln["graph_x"], y_column: y_title, "Customs_Bureau": ln["bureau_label"]},
-        barmode="group"
+        barmode="group",
+        hover_name="Customs_Bureau"  # Safe internal link that resolves indexing collisions
     )
     
     fig.update_traces(
-        hovertemplate="<b>" + ln["bureau_label"] + ":</b> %{hovertext}<br><b>" + ln["generated"] + ":</b> " + hover_format + "<extra></extra>"
+        hovertemplate="<b>%{hovertext}</b><br><b>" + ln["generated"] + ":</b> " + hover_format + "<extra></extra>"
     )
     
-    # Inject active index values for safe text tracking inside interactive layers
-    for i, name in enumerate(df["Customs_Bureau"]):
-        fig.data[i].hovertext = [name]
-        
     fig.update_layout(
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -300,7 +296,7 @@ with col_right:
     st.download_button(
         label=ln["report_btn"],
         data=report_string,
-        file_name=f"agd_customs_fiscal_manifest_{selected_lang.lower().replace(' ', '_')}.txt",
+        file_name=f"azd_customs_fiscal_manifest_{selected_lang.lower().replace(' ', '_')}.txt",
         mime="text/plain"
     )
 
